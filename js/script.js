@@ -9,7 +9,7 @@ const bikesArray = [
   },
   {
     name: "Second Bike",
-    weight: 40,
+    weight: 20,
   },
   {
     name: "Third Bike",
@@ -17,25 +17,37 @@ const bikesArray = [
   },
   {
     name: "Fourth Bike",
-    weight: 20,
+    weight: 40,
   },
 ];
 
-const bikesWeight = [];
+// const bikesWeight = [];
 
-for (const bikes of bikesArray) {
-  bikesWeight.push(bikes.weight);
-}
+// for (const bikes of bikesArray) {
+//   bikesWeight.push(bikes.weight);
+// }
 
-let smallestWeight = bikesWeight[0];
-console.log(bikesWeight);
+// let smallestWeight = bikesWeight[0];
+// console.log(bikesWeight);
 
-for (let i = 0; i < bikesWeight.length; i++) {
-  if (bikesWeight[i] < smallestWeight) {
-    smallestWeight = bikesWeight[i];
+// for (let i = 0; i < bikesWeight.length; i++) {
+//   if (bikesWeight[i] < smallestWeight) {
+//     smallestWeight = bikesWeight[i];
+//   }
+// }
+// console.log(`Il peso minore è ${smallestWeight}Kg`);
+
+// --------------------------------------------------------------------------------
+
+let smallestWeight = bikesArray[0];
+for (let i = 0; i < bikesArray.length; i++) {
+  if (bikesArray[i].weight < smallestWeight.weight) {
+    smallestWeight = bikesArray[i];
   }
 }
-console.log(`Il peso minore è ${smallestWeight}Kg`);
+console.log(
+  `La bici che pesa di meno è ${smallestWeight.name}, con un peso di ${smallestWeight.weight}`
+);
 
 // Creare un array di oggetti di squadre di calcio.
 // Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
