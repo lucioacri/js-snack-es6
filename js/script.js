@@ -54,3 +54,71 @@ console.log(
 // Nome sarà l'unica proprietà da compilare, le altre saranno tutte settate a 0.
 // Generare numeri random al posto degli 0 nelle proprietà "punti" fatti e "falli subiti".
 // Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+
+const generateRandomNumber = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+};
+
+const serieA = [
+  {
+    name: "Napoli",
+    points: generateRandomNumber(1, 100),
+    receivedFauls: generateRandomNumber(1, 10),
+  },
+  {
+    name: "Inter",
+    points: generateRandomNumber(1, 100),
+    receivedFauls: generateRandomNumber(1, 10),
+  },
+  {
+    name: "Atalanta",
+    points: generateRandomNumber(1, 100),
+    receivedFauls: generateRandomNumber(1, 10),
+  },
+  {
+    name: "Bologna",
+    points: generateRandomNumber(1, 100),
+    receivedFauls: generateRandomNumber(1, 10),
+  },
+  {
+    name: "Juventus",
+    points: generateRandomNumber(1, 100),
+    receivedFauls: generateRandomNumber(1, 10),
+  },
+  {
+    name: "Roma",
+    points: generateRandomNumber(1, 100),
+    receivedFauls: generateRandomNumber(1, 10),
+  },
+  {
+    name: "Lazio",
+    points: generateRandomNumber(1, 100),
+    receivedFauls: generateRandomNumber(1, 10),
+  },
+  {
+    name: "Milan",
+    points: generateRandomNumber(1, 100),
+    receivedFauls: generateRandomNumber(1, 10),
+  },
+  {
+    name: "Sampdoria",
+    points: generateRandomNumber(1, 100),
+    receivedFauls: generateRandomNumber(1, 10),
+  },
+  {
+    name: "Torino",
+    points: generateRandomNumber(1, 100),
+    receivedFauls: generateRandomNumber(1, 10),
+  },
+];
+console.log(serieA);
+
+const squadStats = [];
+
+for (let i = 0; i < serieA.length; i++) {
+  //   const squadName = serieA[i].name;
+  //   const fauls = serieA[i].receivedFauls;
+  const stats = `${serieA[i].name} ${serieA[i].receivedFauls}`;
+  squadStats.push(stats);
+}
+console.log(squadStats);
