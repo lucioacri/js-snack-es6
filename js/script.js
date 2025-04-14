@@ -116,9 +116,15 @@ console.log(serieA);
 const squadStats = [];
 
 for (let i = 0; i < serieA.length; i++) {
-  //   const squadName = serieA[i].name;
-  //   const fauls = serieA[i].receivedFauls;
-  const stats = `${serieA[i].name} ${serieA[i].receivedFauls}`;
+  const name = serieA[i].name;
+  const receivedFauls = serieA[i].receivedFauls;
+  //   const stats = `${serieA[i].name} ${serieA[i].receivedFauls}`;
+
+  const stats = {
+    name: name,
+    receivedFauls: receivedFauls,
+  };
+
   squadStats.push(stats);
 }
 console.log(squadStats);
